@@ -2,20 +2,13 @@ from pymongo import MongoClient
 
 
 
-client = MongoClient('localhost', 27017)
+client1 = MongoClient()
+client2 = MongoClient('localhost', 27017)
 
-db = client.test_database
-
-
-
-collection = db.test_collection
-
-print(collection)
-"""
-Collection(Database(
-MongoClient(host=['localhost:27017'], document_class=dict, 
-tz_aware=False, connect=True), 'test_database'), 'test_collection')
-"""
+#db = client.test_database
 
 
+
+print(client1.list_database_names())
+print(client2.list_database_names())
 
