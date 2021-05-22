@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-
+from pprint import pprint
 
 
 client = MongoClient('localhost', 27017)
@@ -24,11 +24,32 @@ post = {"author": "Mike", "text": "My first blog post!",
 	"date": datetime.datetime.utcnow()}
 
 
-posts = db.posts
+posts = db.posts1
+
+print(posts)
+
+
+#post_id = posts.insert_one(post).inserted_id
+#print(post_id)
 
 
 
-post_id = posts.insert_one(post).inserted_id
+print(db.list_collection_names())
 
-print(post_id)
+
+
+
+
+
+
+
+
+
+
+
+for post in posts.find():
+	pprint(post)
+
+
+
 
