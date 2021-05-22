@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    "categories",
 ]
 
 MIDDLEWARE = [
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'src.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'djongo',
-       'NAME': 'your-db-name',
+       'NAME': 'pip_drf',
    }
 }
 
