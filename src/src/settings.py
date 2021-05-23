@@ -85,10 +85,12 @@ WSGI_APPLICATION = 'src.wsgi.application'
 }"""
 
 
+
 DATABASES = {
    'default': {
        'ENGINE': 'djongo',
        'NAME': 'pymongo-project',
+       "ENFORCE_SCHEMA": False,
    }
 }
 

@@ -3,10 +3,9 @@ from rest_framework import serializers
 
 class Category(models.Model):
     name = models.CharField(max_length=60)
-    """parent = models.ForeignKey("self", null=True, 
+    parent = models.ForeignKey("self", null=True, 
     	blank=True, on_delete = models.SET_NULL, 
-    	related_name='children')"""
-
+    	related_name='children')
 
 
 
