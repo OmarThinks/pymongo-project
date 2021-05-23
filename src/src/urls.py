@@ -18,7 +18,6 @@ from django.urls import path, include
 from rest_framework import routers
 
 
-
 #from products.views import ProductViewSet
 from categories.views import CategoryViewSet
 
